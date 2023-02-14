@@ -8,11 +8,10 @@
     "build": "rollup -c ",
     "watch": "rollup -cw ",
     "types:check": "tsc --project tsconfig.json --pretty --noEmit",
-    "lint": "eslint --ext .tsx,.ts . --fix",
+    "lint": "eslint --ext .tsx,.ts .",
+    "lint:fix": "eslint --ext .tsx,.ts . --fix",
     "lint-staged": "lint-staged --config .lintstagedrc.json",
-    "format:check": "prettier . --ignore-path .gitignore --check",
-    "format:fix": "prettier . --ignore-path .gitignore --write",
-    "validate": "npm-run-all --parallel types:check format:check lint-staged"
+    "validate": "npm-run-all --parallel types:check lint-staged"
   },
   "keywords": [],
   "author": "",

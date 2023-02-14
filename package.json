@@ -13,8 +13,8 @@
     "build": "lerna run build --scope lerna-gb-actions",
     "lint": "lerna run --concurrency 1 --stream lint",
     "types:check": "lerna run types:check --scope lerna-gb-actions",
-    "format:fix": "lerna run format:fix --scope lerna-gb-actions",
-    "format:check": "lerna run format:check --scope lerna-gb-actions",
+    "format:check": "prettier . --ignore-path .gitignore --check",
+    "format:fix": "prettier . --ignore-path .gitignore --write",
     "validate": "lerna run --concurrency 3 --stream validate --since HEAD --exclude-dependents"
   },
   "keywords": [
