@@ -13,8 +13,9 @@
     "build": "lerna run build --scope lerna-gb-actions",
     "lint": "lerna run --concurrency 1 --stream lint",
     "types:check": "lerna run types:check --scope lerna-gb-actions",
+    "format:fix": "lerna run format:fix --scope lerna-gb-actions",
     "format:check": "lerna run format:check --scope lerna-gb-actions",
-    "validate": "lerna run --concurrency 1 --stream validate --since HEAD --exclude-dependents"
+    "validate": "lerna run --concurrency 3 --stream validate --since HEAD --exclude-dependents"
   },
   "keywords": [
     "lerna",
