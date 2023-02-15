@@ -30,14 +30,4 @@ jobs:
           git config user.name 'Vladimir Christ'
           git config user.email 'vladimir.c.pereira@gmail.com'
       - name: Version packages
-        run: lerna version ${{ github.event.inputs.version }} --conventional-commits --yes
-      - name: Create release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: v${{ env.RELEASE_VERSION }}
-          release_name: Release ${{ env.RELEASE_VERSION }}
-          draft: false
-          prerelease: false
-          body: Release ${{ env.RELEASE_VERSION }}
+        run: lerna version ${{ github.event.inputs.version }} --no-git-tag-version --conventional-commits --yes
